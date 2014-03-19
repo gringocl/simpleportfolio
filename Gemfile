@@ -47,6 +47,7 @@ end
 group :development do
   gem "guard-minitest"
   gem "spring"
+  gem 'ffaker'
 end
 
 group :test do
