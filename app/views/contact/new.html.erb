@@ -1,0 +1,7 @@
+<%= form_for @message, url: contact_path do |m|  %>
+  <%= m.text_field :name, placeholder: "Name"  %>
+  <%= m.text_field :email, placeholder: "Email"  %>
+  <%= m.text_field :subject, placeholder: "Subject"  %>
+  <%= m.text_area :body, placeholder: "Message"  %>
+  <%= m.submit   %>
+<% end %>

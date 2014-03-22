@@ -1,6 +1,9 @@
 Simpleportfolio::Application.routes.draw do
   resources :posts
 
+  get 'contact' => 'contact#new', via: :get
+  match 'contact' => 'contact#create', via: :post
+
   root "posts#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
