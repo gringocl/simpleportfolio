@@ -1,4 +1,6 @@
 Simpleportfolio::Application.routes.draw do
+  resources :projects
+
   resources :posts
 
   get 'contact' => 'contact#new', via: :get
