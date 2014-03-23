@@ -1,5 +1,6 @@
 class ContactMailer < ActionMailer::Base
   default to: "milesstarkenburg@gmail.com"
+  default from: "donotreply@gringo.io"
 
   def contact_message message
     @message = message

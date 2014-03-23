@@ -1,1 +1,1 @@
-# MiniTest::Rails::Testing.default_tasks << "features"
+MiniTest::Rails::Testing.default_tasks << "features"
