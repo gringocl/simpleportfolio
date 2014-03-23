@@ -12,13 +12,13 @@ gem 'jbuilder', '~> 1.2'
 gem 'dotenv-rails'
 gem 'minitest-rails'
 gem 'minitest'
+gem 'pry-plus'
 
 group :doc do
   gem 'sdoc', require: false
 end
 
 group :development do
-  gem 'pry-plus'
   gem 'ffaker'
   gem "launchy"
 end

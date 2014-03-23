@@ -4,6 +4,7 @@ require "rails/test_help"
 require "minitest/rails"
 require "minitest/rails/capybara"
 require "minitest/pride"
+require "pry-rescue/minitest"
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.

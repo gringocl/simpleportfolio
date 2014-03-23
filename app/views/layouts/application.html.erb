@@ -9,6 +9,15 @@
 <body>
   <h1>GRINGO.IO</h1>
   <h6>aka Miles Starkenburg</h6>
+  <% flashes = {notice: 'success', alert: 'standard', error: 'alert', secondary: 'info'} %>
+   <% flashes.each do |key, value| %>
+         <% if flash[key] %>
+           <%= content_tag :div, :data => { :alert => '' }, :class => "alert-box #{value} radius" do %>
+             <%= flash[key] %>
+         <%= link_to '&times;'.html_safe, '#', :class => 'close'%>
+       <% end %>
+     <% end %>
+   <% end %>
   <nav>
     <ul>
       <li><%= link_to 'Blog', posts_path  %></li>
