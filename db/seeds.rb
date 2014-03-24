@@ -8,5 +8,5 @@
 require 'ffaker'
 
 10.times do 
-  Post.create(title: Faker::HipsterIpsum.sentence, body: Faker::Lorem.paragraphs(5).to_s)
+  Post.create(title: Faker::HipsterIpsum.sentence, body: Faker::Lorem.paragraphs(5).to_s, published: true)
 end

@@ -1,10 +1,12 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  title: MyString
+published:
+  title: This title should be here
   body: MyText
+  published: true
 
-two:
-  title: MyString
-  body: MyText
+unpublished:
+  title: This title should not be here
+  body: FalseText
+  published: false

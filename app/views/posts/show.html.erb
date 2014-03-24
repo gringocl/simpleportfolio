@@ -1,0 +1,11 @@
+<% unless @post.published? %>
+  <p>Unpublished</p>
+  <%= form_for @post, method: :patch do |f| %>
+    <%= f.hidden_field :published, value: true  %>
+    <%= f.submit "Publish1"  %>
+  <% end %>
+<% end %>
+<h6>Published</h6>
+<h2> <%= @post.title  %> </h2>
+  <p> <%= @post.body  %> </p>
+  

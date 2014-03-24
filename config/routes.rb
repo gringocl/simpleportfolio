@@ -1,4 +1,5 @@
 Simpleportfolio::Application.routes.draw do
+  resources :sessions
   resources :projects
 
   resources :posts

@@ -1,5 +1,17 @@
-<% @posts.each do |post|  %>
-  <h3><%= link_to post.title, post_path(post) %> </h3>
-  <p><%= post.body  %></p>
+  <% if current_user %>
+    <%= link_to 'New Post', new_post_path %>
+    <% @posts.each do |post|  %>
+    <h3><%= link_to post.title, post_path(post)  %></h3>
+      <% if post.published? %>
+        <p>published</p>
+      <% else %>
+        <p>unpublished</p>
+      <% end %>
+    <% end %>
+  <% else %>
+    <% @posts.each do |post|  %>
+      <h3><%= link_to post.title, post_path(post) %> </h3>
+      <p><%= post.body  %></p>
+  <% end %>
 <% end %>
 
