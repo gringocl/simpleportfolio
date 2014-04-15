@@ -1,17 +1,22 @@
   <% if current_user %>
     <%= link_to 'New Post', new_post_path %>
     <% @posts.each do |post|  %>
+    <article >
     <h3><%= link_to post.title, post_path(post)  %></h3>
       <% if post.published? %>
         <p>published</p>
       <% else %>
         <p>unpublished</p>
       <% end %>
+      </article>
     <% end %>
   <% else %>
     <% @posts.each do |post|  %>
-      <h3><%= link_to post.title, post_path(post) %> </h3>
+      <article>
+        <p class="date"><%= post.created_at %></p>
+      <h1><%= link_to post.title, post_path(post) %> </h3>
       <p><%= post.body  %></p>
+      </article>
   <% end %>
 <% end %>
 

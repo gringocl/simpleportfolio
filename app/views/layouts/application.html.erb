@@ -5,10 +5,12 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700italic,700,800,800italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <h1>GRINGO.IO</h1>
-  <h6>aka Miles Starkenburg</h6>
+  <%= render 'refills/navigation'  %>
   <% flashes = {notice: 'success', alert: 'standard', error: 'alert', secondary: 'info'} %>
    <% flashes.each do |key, value| %>
          <% if flash[key] %>
@@ -18,13 +20,6 @@
        <% end %>
      <% end %>
    <% end %>
-  <nav>
-    <ul>
-      <li><%= link_to 'Blog', posts_path  %></li>
-      <li><%= link_to 'About & Projects', '#'  %></li>
-      <li><%= link_to 'Contact', contact_path  %></li>
-    </ul>
-  </nav>
 
   <%= yield %>
 
